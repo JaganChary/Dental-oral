@@ -1,0 +1,100 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      Patient Information
+    </div>
+    <div class="col-md-2"></div>
+
+    <div class="col-md-8">
+      <!-- Form -->
+      <form [formGroup]="infoForm">
+        <h5>Basic Details</h5>
+
+        <!-- Name -->
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" formControlName="patient-name" class="form-control" placeholder="Enter Name">
+        </div>
+
+        <!-- Class -->
+        <div class="form-group">
+          <label for="name">Class</label>
+          <input type="text" formControlName="class" class="form-control" placeholder="Enter Class">
+        </div>
+
+        <!-- Admission/ROll No -->
+        <div class="form-group">
+          <label for="name">Addmission/ Role No</label>
+          <input type="text" formControlName="parentName" class="form-control" placeholder="Enter Admission No">
+        </div>
+
+        <!-- Parent's Name -->
+        <div class="form-group">
+          <label for="name">Addmission/ Role No</label>
+          <input type="text" formControlName="roll" class="form-control" placeholder="Enter Admission No">
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="name">Email</label>
+          <input type="email" formControlname="email" class="form-control" placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+
+        <!-- Mobile Number -->
+        <div class="form-group">
+          <label for="name">Mobile Number</label>
+          <input type="number" formControlName="number" class="form-control" placeholder="Enter Name">
+        </div>
+
+        <!-- Doctor's Name -->
+        <div class="form-group">
+          <label for="name">Doctor's Name</label>
+          <input type="name" formControlName="doctorName" class="form-control" placeholder="Enter Name">
+        </div>
+
+        <h5>Oral Hygiene</h5>
+
+        <!-- Stains -->
+        <div class="form-group">
+          <label for="name">Stains</label>
+          <input type="name" formControlName="stains" class="form-control">
+        </div>
+
+        <!-- Plaque -->
+        <div class="form-group">
+          <label for="name">Plaque</label>
+          <input type="name" formControlName="plaque" class="form-control">
+        </div>
+
+        <!-- Tartar -->
+        <div class="form-group">
+          <label for="name">Tartar</label>
+          <input type="name" formControlName="tartar" class="form-control">
+        </div>
+
+        <!-- Cavities -->
+        <h5>Cavities</h5>
+        <div class="form-group">
+          <input type="number" formControlName="cavities" class="form-control">
+        </div>
+
+        <!-- Malocclusion -->
+        <h5>Malocclusion</h5>
+        <div class="form-group">
+          <input type="text" formControlName="malocclusion" class="form-control">
+        </div>
+
+        <!-- Clinical Recommendations -->
+        <h5>Clinical Recommendations</h5>
+        <div class="form-group">
+          <textarea formControlName="clinical" placeholder="Leave Notes"></textarea>
+        </div>
+
+      </form>
+      <!-- End of Form -->
+    </div>
+
+    <div class="col-md-2"></div>
+  </div>
+</div>
