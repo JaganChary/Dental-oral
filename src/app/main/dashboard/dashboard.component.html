@@ -1,7 +1,8 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      Patient Information
+      <h2 style="text-align: center">Patient Information</h2>
+      <hr>
     </div>
     <div class="col-md-2"></div>
 
@@ -13,7 +14,7 @@
         <!-- Name -->
         <div class="form-group">
           <label for="name">Name</label>
-          <input type="text" formControlName="patient-name" class="form-control" placeholder="Enter Name">
+          <input type="text" formControlName="patientName" class="form-control" placeholder="Enter Name">
         </div>
 
         <!-- Class -->
@@ -25,13 +26,13 @@
         <!-- Admission/ROll No -->
         <div class="form-group">
           <label for="name">Addmission/ Role No</label>
-          <input type="text" formControlName="parentName" class="form-control" placeholder="Enter Admission No">
+          <input type="text" formControlName="admission" class="form-control" placeholder="Enter Admission No">
         </div>
 
         <!-- Parent's Name -->
         <div class="form-group">
-          <label for="name">Addmission/ Role No</label>
-          <input type="text" formControlName="roll" class="form-control" placeholder="Enter Admission No">
+          <label for="name">Parent's Name</label>
+          <input type="text" formControlName="parentName" class="form-control" placeholder="Enter Parent's Name">
         </div>
 
         <!-- Email -->
@@ -44,7 +45,7 @@
         <!-- Mobile Number -->
         <div class="form-group">
           <label for="name">Mobile Number</label>
-          <input type="number" formControlName="number" class="form-control" placeholder="Enter Name">
+          <input type="number" formControlName="mobile" class="form-control" placeholder="Enter Name">
         </div>
 
         <!-- Doctor's Name -->
@@ -76,7 +77,7 @@
         <!-- Cavities -->
         <h5>Cavities</h5>
         <div class="form-group">
-          <input type="number" formControlName="cavities" class="form-control">
+          <input type="text" formControlName="cavities" class="form-control">
         </div>
 
         <!-- Malocclusion -->
@@ -88,8 +89,15 @@
         <!-- Clinical Recommendations -->
         <h5>Clinical Recommendations</h5>
         <div class="form-group">
-          <textarea formControlName="clinical" placeholder="Leave Notes"></textarea>
+          <textarea formControlName="clinical" rows="5" cols="100" placeholder="Leave Notes"></textarea>
         </div>
+
+        <h5>Intraoral Camera Images</h5>
+        <div class="form-group">
+          <img src="">
+        </div>
+
+        <button class="btn-self" (click)="btnClick()">Submit</button>
 
       </form>
       <!-- End of Form -->

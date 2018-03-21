@@ -23,7 +23,7 @@ export class DashboardComponent implements OnInit {
 
     this.infoForm = this.formBuilder.group({
 
-      name: ['', Validators.required],
+      patientName: ['', Validators.required],
 
       class: ['', Validators.required],
 
@@ -35,6 +35,8 @@ export class DashboardComponent implements OnInit {
 
       email: ['', Validators.compose([Validators.required, Validators.email])],
 
+      doctorName: ['', Validators.required],
+
       stains: ['', Validators.required],
 
       plaque: ['', Validators.required],
@@ -45,12 +47,19 @@ export class DashboardComponent implements OnInit {
 
       malocclusion: ['', Validators.required],
 
-      clinical: ['', Validators.required]
+      clinical: ['', Validators.required],
+
+      image: []
     })
   }
 
   btnClick(): any {
-    alert('Form Submitted');
-  }
+    if(this.infoForm.invalid) {
 
+      return;
+    } else {
+
+      alert('Form Submitted Successfully');
+    }
+  }
 } 

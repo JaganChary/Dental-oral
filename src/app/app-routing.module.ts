@@ -6,12 +6,12 @@ import { ModuleWithProviders } from '@angular/core';
 import { Router } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser/src/browser';
 
-import { RegisterOrgComponent } from './register-org/register-org.component';
 import { MainModule } from './main/main.module';
 
 // Components
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterDoctorComponent } from './register-doctor/register-doctor.component';
  
 export const routes: Routes = [
   {
@@ -24,8 +24,8 @@ export const routes: Routes = [
     component: LoginComponent, 
   },
   { 
-    path: 'register', 
-    component: RegisterOrgComponent,
+    path: 'register-doctor', 
+    component: RegisterDoctorComponent,
   },
   {
     path: 'main',

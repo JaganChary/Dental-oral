@@ -32,9 +32,11 @@ export class LoginComponent implements OnInit {
 
   btnClick() {
     if(this.loginForm.invalid) {
+
       return;
     } else {
-      this.router.navigate(['/main/dashboard']);
+
+      this.router.navigate(['/main/register-org']);
     }
   }
 }

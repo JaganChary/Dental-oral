@@ -1,23 +1,22 @@
-
-hr { 
-    border: none;
-    height: 2px;
-    background-color: gray;
-    width: 30%;
-
-}
-
 .btn-self {
     padding: 0.6em 2.2em;
     background-color: white;
-    float: right;
     border-radius: 5px;
     color: 3F51B5;
     border: 2px solid #3F51B5;
     border-color: none;
+    float: right;
 }
     
 .btn-self:hover {
     background-color: #3F51B5;
     color: white;
+}
+
+hr { 
+    border: none;
+    height: 2px;
+    background-color: gray;
+    width: 20em;
+
 }
