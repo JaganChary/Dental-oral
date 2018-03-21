@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <h2>Register Form</h2>
+    <hr>  
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-8">
+      <form [formGroup]="registerDoctorForm">
+        <!-- Name -->
+        <div class="form-group">
+          <input type="text" class="form-control" formControlName="name" placeholder="Enter Name">
+        </div>
+
+        <!-- Username/ Email -->
+        <div class="form-group">
+          <input type="text" class="form-control" formControlName="username" placeholder="ENter username or email">
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <input type="password" class="form-control" formControlName="password" placeholder="password">;
+        </div>
+      </form>
+    </div>
+    <div class="col-md-2">
+
+    </div>
+
+  </div>
+</div>
