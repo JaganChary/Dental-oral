@@ -1,3 +1,7 @@
+* {
+    font-family: 'Trebuchet MS Header', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(39, 29, 29);
+}
 .row {
     margin-top: 4.5em;
 }
@@ -7,37 +11,72 @@
     font-size: 3.5em;
 }
 
+h4 {
+    color: white;
+    margin-top: 5px;
+    text-align: center;
+}
+
 hr { 
     border: none;
-    height: 2px;
-    background-color: gray;
-    width: 30%;
-
+    height: 0.5px;
+    background-color: white;
+    width: 100%;
+    margin-top: 2em;
 }
+
 .btn-self {
     padding: 0.6em 2.2em;
     background-color: white;
     border-radius: 5px;
-    color: 3F51B5;
-    border: 2px solid #3F51B5;
+    color: gray;
+    margin-left: 6.5em;
+    border: 2px solid lightgray;
     border-color: none;
+    transition: box-shadow .4s cubic-bezier(.25,.8,.25,1),background-color .4s cubic-bezier(.25,.8,.25,1),-webkit-transform .4s cubic-bezier(.25,.8,.25,1);
+
+}
+/* transition: box-shadow .4s cubic-bezier(.25,.8,.25,1),background-color .4s cubic-bezier(.25,.8,.25,1),transform .4s cubic-bezier(.25,.8,.25,1); */
+
+.asset1 {
+    position: absolute;
+    margin-top: -0.4em;
+    margin-left: 4.5em;
+    z-index: 1000;
+    background-color :white;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00000040;
+    padding: 0.2em;
+}
+
+.loginBox {
+    position: relative;
+    height: 30em;
+    margin-top: 3em;
+    width: 25em;
+    box-shadow: 5px 5px 2em lightgray;
+    border-radius: 10px;
+    padding: 2em;
+    background: linear-gradient(#1BBcB1, #37B9E9)
 }
         
 .btn-self:hover {
-    background-color: #3F51B5;
+    background-color: #1BBcB1;
     color: white;
+    
 }
 
 .move {
-    padding: 2em;
+    text-align: right;
 }
 .move a {
     text-decoration: none;
-    color: darkslategray;
+    color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
 }
 .move a:hover {
     text-decoration: underline;
-    color: darkslategray; 
+    color: white; 
 } 

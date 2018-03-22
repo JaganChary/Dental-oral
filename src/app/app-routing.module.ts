@@ -11,7 +11,6 @@ import { MainModule } from './main/main.module';
 // Components
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { RegisterDoctorComponent } from './register-doctor/register-doctor.component';
  
 export const routes: Routes = [
   {
@@ -23,13 +22,13 @@ export const routes: Routes = [
     path: 'login',
     component: LoginComponent, 
   },
-  { 
-    path: 'register-doctor', 
-    component: RegisterDoctorComponent,
+  {
+    path: 'student-admin',
+    loadChildren: 'app/student-admin/student-admin.module#StudentAdminModule'
   },
   {
     path: 'main',
-    loadChildren: 'app/main/main.module#MainModule',
+    loadChildren: 'app/main/main.module#MainModule'
   }
 ]
 

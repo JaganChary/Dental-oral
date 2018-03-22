@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { FormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private router: Router,
+    private route:ActivatedRoute,
     private formBuilder: FormBuilder,
     
   ) { }
@@ -31,12 +32,22 @@ export class LoginComponent implements OnInit {
   // Logging In
 
   btnClick() {
-    if(this.loginForm.invalid) {
 
-      return;
-    } else {
+    console.log(this.loginForm.get('username').value);
+    if(this.loginForm.get('username').value == 'dentist' ) {
 
-      this.router.navigate(['/main/register-org']);
+      this.router.navigate(['/main/dentist']);
+
+    } else if(this.loginForm.get('username').value == 'student-admin') {
+      console.log('dfdsf');
+      this.router.navigate(['/student-admin']); 
+
+    } else if(this.loginForm.get('username').value == 'super-admin') {
+
+      this.router.navigate(['/main/super-admin']);
+    } else if(this.loginForm.get('username').value == 'patient') {
+
+      this.router.navigate(['/main/patient']);
     }
   }
 }

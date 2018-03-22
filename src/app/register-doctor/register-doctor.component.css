@@ -1,0 +1,42 @@
+.register {
+    position: absolute;
+    margin-top: 5em;
+    left: 6.5em;
+    color: white;
+    z-index: 1000;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00000040;
+    padding: 1em 1.5em;
+    background: linear-gradient(#DDC3FC, #9FC4FC);
+}
+
+.registerBox {
+    background: linear-gradient(white, lightgrey);
+    position: relative;
+    height: 30em;
+    margin-top: 8em;
+    width: 25em;
+    box-shadow: 5px 5px 2em lightgray;
+    border-radius: 10px;
+    padding: 2em;
+    
+}
+
+.btn-self {
+    padding: 0.6em 2.2em;
+    background-color: white;
+    border-radius: 5px;
+    color: gray;
+    margin-left: 6.5em;
+    border: 2px solid lightgray;
+    border-color: none;
+    transition: box-shadow .4s cubic-bezier(.25,.8,.25,1),background-color .4s cubic-bezier(.25,.8,.25,1),-webkit-transform .4s cubic-bezier(.25,.8,.25,1);
+
+}
+
+.btn-self:hover {
+    background-color: #1BBcB1;
+    color: white;
+    
+}

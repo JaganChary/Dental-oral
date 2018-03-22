@@ -4,8 +4,8 @@ import { MainComponent } from './main.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { StudentComponent } from './student/student.component';
-import { RegisterOrgComponent } from './register-org/register-org.component';
+import { RegisterDoctorComponent } from '../register-doctor/register-doctor.component';
+import { DentistComponent } from './dentist/dentist.component';
 
 @NgModule({
   imports: [
@@ -15,24 +15,22 @@ import { RegisterOrgComponent } from './register-org/register-org.component';
     RouterModule.forChild([
       {
         path: '',
-        component: MainComponent
-      },
-      {
-        path: 'register-org',
-        component: RegisterOrgComponent
-      },
-      {
-        path: 'student',
-        component: StudentComponent
+        component: MainComponent,
+        children: [
+          {
+            path: 'register-doctor',
+            component: RegisterDoctorComponent
+          }
+        ]
       },
       {
         path: '',
         redirectTo: 'main',
         pathMatch: 'full'
-        
+
       },
     ])
   ],
-  declarations: [MainComponent, DashboardComponent, StudentComponent, RegisterOrgComponent]
+  declarations: [MainComponent, DashboardComponent, RegisterDoctorComponent, DentistComponent]
 })
 export class MainModule { }

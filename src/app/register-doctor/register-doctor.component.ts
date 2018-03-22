@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register-doctor',
@@ -10,7 +11,8 @@ export class RegisterDoctorComponent implements OnInit {
 
   registerDoctorForm: FormGroup
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -31,5 +33,6 @@ export class RegisterDoctorComponent implements OnInit {
 
   btnClick(): any {
     
+    this.router.navigate(['/main/student']);
   }
 }

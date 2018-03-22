@@ -1,29 +1,37 @@
 <div class="container">
   <div class="row">
-    <h2>Register Form</h2>
-    <hr>  
-    <div class="col-md-2">
+    <div class="col-md-3">
 
     </div>
-    <div class="col-md-8">
-      <form [formGroup]="registerDoctorForm">
+
+    <div class="col-md-6">
+      <div class="register">
+        <h3>Register Form</h3>
+      </div>
+      <div class="registerBox">
         <!-- Name -->
-        <div class="form-group">
-          <input type="text" class="form-control" formControlName="name" placeholder="Enter Name">
+        <div class="form-group" style="margin-top: 4em;">
+          <label for="name">Organization</label>
+          <input type="text" class="form-control" placeholder="Organization Name">
         </div>
 
         <!-- Username/ Email -->
         <div class="form-group">
-          <input type="text" class="form-control" formControlName="username" placeholder="ENter username or email">
+          <label for="email">Email</label>
+          <input type="text" class="form-control" placeholder="Email Address">
         </div>
 
         <!-- Password -->
         <div class="form-group">
-          <input type="password" class="form-control" formControlName="password" placeholder="password">;
+          <label for="password">Password</label>
+          <input type="password" class="form-control" placeholder="Password">;
         </div>
-      </form>
+
+        <button class="btn-self" (click)="btnClick()">Submit</button>
+      </div>
+      <!-- </form> -->
     </div>
-    <div class="col-md-2">
+    <div class="col-md-3">
 
     </div>
 
