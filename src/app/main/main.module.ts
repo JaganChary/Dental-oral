@@ -5,7 +5,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterDoctorComponent } from '../register-doctor/register-doctor.component';
-import { DentistComponent } from './dentist/dentist.component';
 
 @NgModule({
   imports: [
@@ -20,17 +19,15 @@ import { DentistComponent } from './dentist/dentist.component';
           {
             path: 'register-doctor',
             component: RegisterDoctorComponent
+          },
+          {
+            path : 'dentist',
+            loadChildren: "app/main/dentist/dentist.module#DentistModule"
           }
         ]
-      },
-      {
-        path: '',
-        redirectTo: 'main',
-        pathMatch: 'full'
-
-      },
+      }
     ])
   ],
-  declarations: [MainComponent, DashboardComponent, RegisterDoctorComponent, DentistComponent]
+  declarations: [MainComponent, DashboardComponent, RegisterDoctorComponent]
 })
 export class MainModule { }

@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
 
   initForm(): any {
     this.loginForm = this.formBuilder.group({
-      username: ['dental@gmail.com', [Validators.required, Validators.email]],
+      username: ['dentist', [Validators.required, Validators.email]],
       password: ['123456', Validators.compose([Validators.required, Validators.minLength(4), Validators.maxLength(20)])]
     })
   }
@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
     console.log(this.loginForm.get('username').value);
     if(this.loginForm.get('username').value == 'dentist' ) {
 
-      this.router.navigate(['/main/dentist']);
+      this.router.navigate(['main','dentist']);
 
     } else if(this.loginForm.get('username').value == 'student-admin') {
       console.log('dfdsf');
