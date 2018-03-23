@@ -1,0 +1,37 @@
+.btn-self {
+    padding: 0.6em 2.2em;
+    background-color: #1BBcB1;
+    border-radius: 5px;
+    color: white;
+    /* margin-left: 6.5em; */
+    border: 2px solid lightgray;
+    border-color: none;
+    /* transition: box-shadow .4s cubic-bezier(.25,.8,.25,1),background-color .4s cubic-bezier(.25,.8,.25,1),-webkit-transform .4s cubic-bezier(.25,.8,.25,1); */
+
+}
+
+.btn-self:hover {
+    background-color: #2A88AD;
+    color: white;
+    
+}
+
+hr { 
+    border: none;
+    height: 1.5px;
+    background-color: darkslategray;
+    width: 21em;
+    margin-bottom: 3em;
+}
+
+.card {
+    margin-bottom: 1em;
+    border-radius: 2px;
+    box-shadow: 0 0 10px #00000040;
+    height: 17rem;
+    width: 15rem;
+}
+
+span.text-muted {
+    font-size: 12px;
+}

@@ -1,7 +1,21 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <button (click)="btnClick()">Submit</button>
+      <h2>Organization List</h2>
+      <hr>
+      <div class="row">
+        <div class="col-lg-4" *ngFor="let org of orgArray">
+          <div class="card">
+            <div class="card-body" style="font-size: 14px;">
+              <h5 class="card-title">{{org.orgName}}</h5>
+              <p class="card-text">Address - <span class="text-muted">{{org.address}}</span></p>
+              <p class="card-text">Institution Type - <span class="text-muted">{{org.institution}}</span></p>
+              <p class="card-text">Camp Status = <span class="text-muted">{{org.campStatus}}</span></p>
+              <a href="#" class="btn btn-self" routerLink="student">Go Somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

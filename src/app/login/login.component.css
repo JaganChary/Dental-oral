@@ -33,8 +33,14 @@ hr {
     margin-left: 6.5em;
     border: 2px solid lightgray;
     border-color: none;
-    transition: box-shadow .4s cubic-bezier(.25,.8,.25,1),background-color .4s cubic-bezier(.25,.8,.25,1),-webkit-transform .4s cubic-bezier(.25,.8,.25,1);
+    /* transition: box-shadow .4s cubic-bezier(.25,.8,.25,1),background-color .4s cubic-bezier(.25,.8,.25,1),-webkit-transform .4s cubic-bezier(.25,.8,.25,1); */
 
+}
+
+.btn-self:hover {
+    background-color: #1BBcB1;
+    color: white;
+    
 }
 /* transition: box-shadow .4s cubic-bezier(.25,.8,.25,1),background-color .4s cubic-bezier(.25,.8,.25,1),transform .4s cubic-bezier(.25,.8,.25,1); */
 
@@ -61,11 +67,7 @@ hr {
     background: linear-gradient(#1BBcB1, #37B9E9)
 }
         
-.btn-self:hover {
-    background-color: #1BBcB1;
-    color: white;
-    
-}
+
 
 .move {
     text-align: right;

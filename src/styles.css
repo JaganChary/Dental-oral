@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    font-family: 'Trebuchet MS Header', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(39, 29, 29);
+}
+
+
+h2 {
+    text-align: center;
+    margin-top: 1.6em;
+}
