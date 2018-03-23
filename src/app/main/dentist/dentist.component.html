@@ -89,34 +89,41 @@
 
                     <li class="list-group-item" style="background-color: #f5f7f8" *ngFor="let patient of patients">
                         <div class="row">
-                            <div class="col-sm-3">
-                                <label for="">
-                                    Name :
-                                </label>
+                            <div class="col-sm-10">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label style="color:#2A88AD" for="">
+                                        Name :
+                                    </label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <p>{{patient.name}}</p>
+                                </div>
                             </div>
-                            <div class="col-sm-9">
-                                <p>{{patient.name}}</p>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label style="color:#2A88AD" for="">
+                                        Email :
+                                    </label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <p>{{patient.email}}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label style="color:#2A88AD" for="">
+                                        Phone Number :
+                                    </label>
+                                </div>
+                                <div class="col-sm-8">
+                                    <p>{{patient.phone}}</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <label for="">
-                                    Email :
-                                </label>
-                            </div>
-                            <div class="col-sm-9">
-                                <p>{{patient.email}}</p>
-                            </div>
+                        <div class="col-sm-2">
+                            <button style="background-color:#458eb3;color:white" class="btn">Edit</button>
                         </div>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <label for="">
-                                    Phone Number :
-                                </label>
-                            </div>
-                            <div class="col-sm-9">
-                                <p>{{patient.phone}}</p>
-                            </div>
                         </div>
                     </li>
                 </ul>
