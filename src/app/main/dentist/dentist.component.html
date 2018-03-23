@@ -123,31 +123,17 @@
             </div>
 
             <div *ngIf="tab==3">
-                <ul class="list-group">
-                    <li *ngFor="let appointment of appointments" style="background-color: #f5f7f8" class="list-group-item">
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <label for="">
-                                    Date :
-                                </label>
-                            </div>
-                            <div class="col-sm-9">
-                                <p>{{appointment.date}}</p>
+                <div class="row">
+                    <div *ngFor="let appointment of appointments" style="margin-top:30px;" class="col-sm-6">
+                        <div class="card" style="background-color:#f5f7f8">
+                            <div class="card-body">
+                                <h5 style="color:#2A88AD" class="card-title">{{appointment.patientName}}</h5>
+                                <p class="card-text"> on {{appointment.date}}</p>
+                                <p class="card-text">at {{appointment.location}}</p>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <label for="">
-                                    Location :
-                                </label>
-                            </div>
-                            <div class="col-sm-9">
-                                <p>{{appointment.location}}</p>
-                            </div>
-                        </div>
-
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
 
         </div>

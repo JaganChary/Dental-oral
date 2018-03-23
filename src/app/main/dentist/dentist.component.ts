@@ -33,14 +33,37 @@ export class DentistComponent implements OnInit {
 
   appointments : any = [
     {
+      patientName : "XYZ",
       date : "12-04-2018",
       location : "St. Martha School"
     },
     {
+      patientName : "XYZ",
       date : "13-04-2018",
       location : "Riviera Technologies"
     },
     {
+      patientName : "XYZ",
+      date : "13-04-2018",
+      location : "Kendra Vidyalaya School"
+    },
+    {
+      patientName : "XYZ",
+      date : "13-04-2018",
+      location : "Riviera Technologies"
+    },
+    {
+      patientName : "XYZ",
+      date : "13-04-2018",
+      location : "Kendra Vidyalaya School"
+    },
+    {
+      patientName : "XYZ",
+      date : "13-04-2018",
+      location : "Riviera Technologies"
+    },
+    {
+      patientName : "XYZ",
       date : "13-04-2018",
       location : "Kendra Vidyalaya School"
     }
