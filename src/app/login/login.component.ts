@@ -46,8 +46,11 @@ export class LoginComponent implements OnInit {
 
       this.router.navigate(['/main/super-admin']);
     } else if(this.loginForm.get('username').value == 'patient') {
-
       this.router.navigate(['/main/patient']);
+    } else if(this.loginForm.get('username').value == 'konnect-admin') {
+      this.router.navigate(['/konnect-admin']);
+    }else{
+      this.router.navigate(['/guest']);
     }
   }
 }

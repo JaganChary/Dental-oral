@@ -29,6 +29,14 @@ export const routes: Routes = [
   {
     path: 'main',
     loadChildren: 'app/main/main.module#MainModule'
+  },
+  {
+    path: 'guest',
+    loadChildren: 'app/guest/guest.module#GuestModule'
+  },
+  {
+    path: 'konnect-admin',
+    loadChildren: 'app/Konnect-admin/konnect-admin.module#KonnectAdminModule'
   }
 ]
 

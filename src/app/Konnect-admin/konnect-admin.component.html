@@ -1,0 +1,417 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#" style="background-color: white; padding: 5px; margin-left: 2em;">
+        <img src="../../assets/Asset-1.png" alt="" style="height: 2em; width: 6em;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</nav>
+<div class="row">
+    <div class="col-sm-1">
+
+    </div>
+    <div class="col-sm-10">
+        <ul class="nav nav-tabs nav-fill">
+            <li class="nav-item">
+                <a class="nav-link" [class.active]="tab==1" (click)="tab=1">Register</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [class.active]="tab==2" (click)="tab=2">Registered Clients</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [class.active]="tab==3" (click)="tab=3">Reports</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [class.active]="tab==4" (click)="tab=4">Requests</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [class.active]="tab==5" (click)="tab=5">Queries</a>
+            </li>
+        </ul>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div *ngIf="tab == 1" class="col-sm-10">
+                <br>
+                <label for="">Register As : </label>
+                <select class="form-control" [(ngModel)]="selected">
+                    <option *ngFor="let r of registerAs" [value]="r.value">{{r.title}}</option>
+                </select>
+
+                <!-- Patient Form -->
+                <div *ngIf="selected == 1" class="form-style-5">
+                    <form>
+                        <fieldset>
+                            <div class="form-group">
+                                <!-- Name -->
+                                <input type="text" class="form-control" placeholder="Enter Name">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <!-- Type -->
+                                    <div class="form-group">
+                                        <select class="form-control" name="type" [(ngModel)]="type">
+                                            <option selected disabled value="">Type</option>
+                                            <option value="student">Student</option>
+                                            <option value="teacher">Teacher</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div *ngIf="type == 'student'" class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Class">
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Enter Email Id">
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="number" class="form-control" placeholder="Mobile Number">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Organisation">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Address">
+                            </div>
+
+                        </fieldset>
+                        <button class="btn-self">Submit</button>
+                    </form>
+                </div>
+
+                <!-- Dentist Form -->
+                <div *ngIf="selected == 2" class="form-style-5">
+                    <form>
+                        <fieldset>
+                            <div class="form-group">
+                                <!-- Name -->
+                                <input type="text" class="form-control" placeholder="Enter Name">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Address">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <!-- Type -->
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Qualification">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Clinic Name">
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="number" class="form-control" placeholder="Mobile Number">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Enter Email Id">
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <button class="btn-self">Submit</button>
+                    </form>
+                </div>
+
+                <!-- Organisation Form -->
+                <div *ngIf="selected == 3" class="form-style-5">
+                    <form>
+                        <fieldset>
+                            <div class="form-group">
+                                <!-- Name -->
+                                <input type="text" class="form-control" placeholder="Enter Name">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Address">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <!-- Type -->
+                                    <div class="form-group">
+                                        <select class="form-control" name="type">
+                                            <option value="" selected disabled>Type</option>
+                                            <option value="student">Corporate</option>
+                                            <option value="student">School</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="number" class="form-control" placeholder="Mobile Number">
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="number" class="form-control" placeholder="Mobile Number">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <textarea type="text" class="form-control" placeholder="Description"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                        <button class="btn-self">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <div *ngIf="tab == 2" class="col-sm-10">
+                <br>
+                <label for="">View List of : </label>
+                <select class="form-control" [(ngModel)]="selected">
+                    <option *ngFor="let r of registerAs" [value]="r.value">{{r.title}}</option>
+                </select>
+
+                <!-- Patient Form -->
+                <div *ngIf="selected == 1" class="form-style-5">
+                    <ul class="list-group">
+                        <li class="list-group-item" *ngFor="let patient of patients">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <label style="display:inline-block" for="">Name : </label> {{patient.name}}
+                                    <br>
+                                    <label style="display:inline-block" for="">Type : </label> {{patient.type}}
+                                    <br>
+                                    <label style="display:inline-block" for="">Class : </label> {{patient.class}}
+                                    <br>
+                                    <label style="display:inline-block" for="">Email : </label> {{patient.email}}
+                                    <br>
+                                    <label style="display:inline-block" for="">Contact : </label> {{patient.contact}}
+                                    <br>
+                                    <label style="display:inline-block" for="">Address : </label> {{patient.address}}
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="button" value="Edit" class="btn btn-primary">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Dentist Form -->
+                <div *ngIf="selected == 2" class="form-style-5">
+                    <ul class="list-group">
+                        <li class="list-group-item" *ngFor="let dentist of dentists">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <label style="display:inline-block" for="">Name : </label> {{dentist.name}}
+                                    <br>
+                                    <label style="display:inline-block" for="">Qualification : </label> {{dentist.qualification}}
+                                    <br>
+                                    <label style="display:inline-block" for="">Email : </label> {{dentist.email}}
+                                    <br>
+                                    <label style="display:inline-block" for="">Contact : </label> {{dentist.contact}}
+                                    <br>
+                                    <label style="display:inline-block" for="">Address : </label> {{dentist.address}}
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="button" value="Edit" class="btn btn-primary">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Organisation Form -->
+                <div *ngIf="selected == 3" class="form-style-5">
+                    <ul class="list-group">
+                        <li class="list-group-item" *ngFor="let org of organisations">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <label style="display:inline-block" for="">Name : </label> {{org.name}}
+                                    <br>
+                                    <label style="display:inline-block" for="">Type : </label> {{org.type}}
+                                    <br>
+                                    <label style="display:inline-block" for="">Email : </label> {{org.email}}
+                                    <br>
+                                    <label style="display:inline-block" for="">Contact : </label> {{org.contact}}
+                                    <br>
+                                    <label style="display:inline-block" for="">Address : </label> {{org.address}}
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="button" value="Edit" class="btn btn-primary">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div *ngIf="tab == 3" class="col-sm-10">
+                <br>
+                <label for="">View Reports of : </label>
+                <select class="form-control" [(ngModel)]="report">
+                    <option value="appointment">Checkup on Appointments</option>
+                    <option value="camp">Checkup At Dental Camps</option>
+                </select>
+
+                <!-- Dentist Form -->
+                <div *ngIf="report == 'appointment'" class="form-style-5">
+                    <ul class="list-group">
+                        <li class="list-group-item" *ngFor="let appointment of appointmentsReport">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <label style="display:inline-block" for="">Doctor : </label> {{appointment.doctor}}
+                                    <br>
+                                    <label style="display:inline-block" for="">Location : </label> {{appointment.location}}
+                                    <br>
+                                    <label style="display:inline-block" for="">Date : </label> {{appointment.date}}
+                                    <br>
+                                    <label style="display:inline-block" for="">Patient : </label> {{appointment.patient}}
+                                    <br>
+                                    <label style="display:inline-block" for="">Description : </label> {{appointment.description}}
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="button" value="Edit" class="btn btn-primary">
+                                    <br> <br>
+                                    <input type="button" value="Send" class="btn btn-primary">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Organisation Form -->
+                <div *ngIf="report == 'camp'" class="form-style-5">
+                    <ul class="list-group">
+                        <li class="list-group-item" *ngFor="let camp of campsreport">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <label style="display:inline-block" for="">Location : </label> {{camp.location}}
+                                    <br>
+                                    <label style="display:inline-block" for="">Doctor : </label> {{camp.doctor}}
+                                    
+                                    <br>
+                                    <label style="display:inline-block" for="">Date : </label> {{camp.date}}
+                                    <br>
+                                    <label style="display:inline-block" for="">Description : </label> {{camp.description}}
+
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="button" value="Edit" class="btn btn-primary">
+                                    <br><br>
+                                    <input type="button" value="Send" class="btn btn-primary">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div *ngIf="tab == 4" class="col-sm-10">
+                <br>
+                <label for="">View Requests of : </label>
+                <select class="form-control" [(ngModel)]="request">
+                    <option value="appointment">Appointments</option>
+                    <option value="camp">Dental Camps</option>
+                </select>
+
+                <!-- Dentist Form -->
+                <div *ngIf="report == 'appointment'" class="form-style-5">
+                    <ul class="list-group">
+                        <li class="list-group-item" *ngFor="let appointment of appointments">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <label style="display:inline-block" for="">Doctor : </label> {{appointment.doctor}}
+                                    <br>
+                                    <label style="display:inline-block" for="">Location : </label> {{appointment.location}}
+                                    <br>
+                                    <label style="display:inline-block" for="">Date : </label> {{appointment.date}}
+                                    <br>
+                                    <label style="display:inline-block" for="">Status : </label> {{appointment.status}}
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="button" value="Edit" class="btn btn-primary">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Organisation Form -->
+                <div *ngIf="report == 'camp'" class="form-style-5">
+                    <ul class="list-group">
+                        <li class="list-group-item" *ngFor="let camp of camps">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <label style="display:inline-block" for="">Location : </label> {{camp.location}}
+                                    <br>
+                                    <label style="display:inline-block" for="">Status : </label> {{camp.status}}
+                                    <span *ngIf="camp.date">
+                                        <br>
+                                        <label style="display:inline-block" for="">Date : </label> {{camp.date}}
+                                    </span>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="button" value="Edit" class="btn btn-primary">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+            <div *ngIf="tab == 5" class="col-sm-10">
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let query of queries">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <label style="display:inline-block" for="">Title : </label> {{query.title}}
+                                <br>
+                                <label style="display:inline-block" for="">Description : </label> {{query.description}}
+                                <br>
+                                <label style="display:inline-block" for="">Status : </label> {{query.status}}
+                            </div>
+                            <div class="col-sm-4">
+                                <input *ngIf="query.status == 'Open'" type="button" value="Respond" class="btn btn-primary">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
